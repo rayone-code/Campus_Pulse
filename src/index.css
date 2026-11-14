@@ -1,0 +1,204 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Manrope", system-ui, sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: #f5f7fb;
+    color: #0f172a;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 whitespace-nowrap shrink-0 rounded-lg bg-[#2457D6] px-4 py-2 text-sm font-semibold text-white transition duration-200 hover:bg-[#1b46b5] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2457D6] disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 whitespace-nowrap shrink-0 rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition-colors duration-150 hover:bg-slate-50 hover:text-slate-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .btn-danger {
+    @apply inline-flex items-center justify-center gap-2 whitespace-nowrap shrink-0 rounded-lg bg-rose-600 px-4 py-2 text-sm font-semibold text-white transition-colors duration-150 hover:bg-rose-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rose-600 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .input-field {
+    @apply block w-full rounded-lg border border-slate-200 bg-white px-3.5 py-2 text-sm text-slate-900 placeholder:text-slate-400 focus:border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-600/15 disabled:bg-slate-100 disabled:text-slate-500;
+  }
+
+  .surface-card {
+    @apply rounded-xl border border-slate-200 bg-white;
+  }
+}
+
+/* Night mode keeps the CampusPulse navy, blue, and gold.
+   Page #0E1626, cards #172033, text #E7EDF6, borders #2A3650. */
+html.dark {
+  color-scheme: dark;
+}
+
+html.dark body {
+  background-color: #0e1626;
+  color: #e7edf6;
+}
+
+html.dark .bg-white,
+html.dark .bg-white\/90,
+html.dark .bg-white\/95 {
+  background-color: #172033;
+}
+
+html.dark .bg-slate-50,
+html.dark .bg-slate-50\/70,
+html.dark .bg-slate-50\/40,
+html.dark .hover\:bg-slate-50:hover,
+html.dark .hover\:bg-slate-50\/70:hover,
+html.dark .hover\:bg-slate-50\/40:hover {
+  background-color: #121a2b;
+}
+
+html.dark .bg-slate-100,
+html.dark .hover\:bg-slate-100:hover,
+html.dark .disabled\:bg-slate-100:disabled {
+  background-color: #1c2740;
+}
+
+html.dark .bg-\[\#F5F7FB\],
+html.dark .bg-\[\#f5f7fb\] {
+  background-color: #0e1626;
+}
+
+html.dark .bg-\[\#101D3A\] {
+  background-color: #070c16;
+}
+
+html.dark .text-slate-900,
+html.dark .text-slate-800,
+html.dark .text-\[\#101D3A\],
+html.dark .hover\:text-slate-900:hover,
+html.dark .hover\:text-\[\#101D3A\]:hover {
+  color: #e7edf6;
+}
+
+html.dark .text-slate-700,
+html.dark .text-slate-600,
+html.dark .hover\:text-slate-700:hover {
+  color: #c5d0e2;
+}
+
+html.dark .text-slate-500,
+html.dark .text-slate-400 {
+  color: #8ea0ba;
+}
+
+html.dark .text-\[\#8A6A24\] {
+  color: #e0c07a;
+}
+
+html.dark .text-blue-700,
+html.dark .text-blue-800,
+html.dark .hover\:text-blue-700:hover,
+html.dark .hover\:text-blue-800:hover {
+  color: #9db7ff;
+}
+
+html.dark .text-emerald-700,
+html.dark .text-emerald-800,
+html.dark .text-emerald-900 {
+  color: #a7f3d0;
+}
+
+html.dark .text-rose-700,
+html.dark .text-rose-800 {
+  color: #fecdd3;
+}
+
+html.dark .text-amber-700,
+html.dark .text-amber-800,
+html.dark .text-amber-900 {
+  color: #f6e3b0;
+}
+
+html.dark .border-slate-100,
+html.dark .border-slate-200,
+html.dark .border-slate-200\/80,
+html.dark .divide-slate-100 > :not([hidden]) ~ :not([hidden]),
+html.dark .divide-slate-200 > :not([hidden]) ~ :not([hidden]) {
+  border-color: #2a3650;
+}
+
+html.dark .bg-blue-50 {
+  background-color: #1a2a4a;
+}
+
+html.dark .bg-amber-50,
+html.dark .bg-amber-50\/70,
+html.dark .bg-amber-100 {
+  background-color: #3a2e14;
+}
+
+html.dark .bg-rose-50,
+html.dark .bg-rose-100 {
+  background-color: #3a1820;
+}
+
+html.dark .bg-emerald-50,
+html.dark .bg-emerald-50\/70 {
+  background-color: #10281f;
+}
+
+html.dark .border-amber-200 {
+  border-color: #6b5420;
+}
+
+html.dark .border-rose-200 {
+  border-color: #7f2d3b;
+}
+
+html.dark .border-emerald-200 {
+  border-color: #1f6b4a;
+}
+
+html.dark .placeholder\:text-slate-400::placeholder {
+  color: #7d90ab;
+}
+
+html.dark .btn-secondary {
+  background-color: #172033;
+  color: #e7edf6;
+  border-color: #2a3650;
+}
+
+html.dark .btn-secondary:hover {
+  background-color: #1c2740;
+  color: #e7edf6;
+}
+
+html.dark .input-field {
+  background-color: #121a2b;
+  color: #e7edf6;
+  border-color: #2a3650;
+}
+
+html.dark .input-field:disabled {
+  background-color: #1c2740;
+  color: #8ea0ba;
+}
+
+html.dark .surface-card {
+  background-color: #172033;
+  border-color: #2a3650;
+}
+
+html.dark .poster-fallback {
+  background-image: linear-gradient(to bottom right, #1c2740, #172033, #1a2a4a);
+}
