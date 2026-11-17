@@ -42,9 +42,9 @@ const ACTIVITIES = [
   },
   {
     title: "Campus Gates",
-    place: "Nalanda Campus, Indore",
+    place: "Takshshila Campus, Indore",
     image: DAVV_NALANDA_GATE,
-    alt: "Nalanda Campus gate, Devi Ahilya Vishwavidyalaya, Indore",
+    alt: "Takshshila Campus gate, Devi Ahilya Vishwavidyalaya, Indore",
   },
 ];
 
